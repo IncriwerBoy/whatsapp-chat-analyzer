@@ -43,17 +43,17 @@ if uploaded_file is not None:
         
         #monthly timeline
         st.title("Monthly Timeline")
-        timeline = helper.monthly_timeline(selected_user,df)
+        timeline_monthly = helper.monthly_timeline(selected_user,df)
         fig, ax = plt.subplots()
-        ax.plot(timeline['time'], timeline['messages'])
+        ax.plot(timeline_monthly['time'], timeline_monthly['messages'])
         plt.xticks(rotation='vertical')
         st.pyplot(fig)
         
         #daily timeline
-        st.title("Monthly Timeline")
-        timeline = helper.daily_timeline(selected_user, df)
+        st.title("Daily Timeline")
+        timeline_daily = helper.daily_timeline(selected_user, df)
         fig, ax = plt.subplots()
-        ax.plot(timeline['date_only'], timeline['messages'])
+        ax.plot(timeline_daily['date_only'], timeline_daily['messages'])
         plt.xticks(rotation='vertical')
         st.pyplot(fig)
         
