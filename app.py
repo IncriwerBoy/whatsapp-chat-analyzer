@@ -3,7 +3,6 @@ import preprocessor
 import helper
 from matplotlib import pyplot as plt
 
-
 st.sidebar.title("Whatsapp Chat Analyzer")
 
 uploaded_file = st.sidebar.file_uploader("Choose a file")
@@ -118,5 +117,3 @@ if uploaded_file is not None:
             fig, ax = plt.subplots()
             ax.pie(df_emojis[1].head(5), labels= df_emojis[0].head(5), autopct = '%0.2f')
             st.pyplot(fig)
-        
-        
